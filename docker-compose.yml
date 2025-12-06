@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: aeterna_backend
+    ports:
+      - "127.0.0.1:5000:5000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://aeterna_user:secret_password@db:5432/aeterna_db
+    restart: unless-stopped
+
+  db:
+    image: postgres:13
+    container_name: aeterna_db
+    environment:
+      - POSTGRES_USER=aeterna_user
+      - POSTGRES_PASSWORD=secret_password
+      - POSTGRES_DB=aeterna_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  db_data:

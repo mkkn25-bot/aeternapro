@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeterna - Entretien et Fleurissement de Sépultures</title>
+    <meta name="description" content="Service premium d'entretien et de fleurissement de tombes. Respect, dignité et sérénité pour honorer la mémoire de vos proches.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">AETERNA<span>.</span></a>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Devis Gratuit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Honorer la Mémoire</h1>
+            <p>Service d'entretien et de fleurissement de sépultures avec dignité et respect. Assurez la pérennité du souvenir de vos proches, où que vous soyez.</p>
+            <a href="#contact" class="btn-primary">Nous Contacter</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Nos Prestations</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-broom service-icon"></i>
+                <h3>Nettoyage Complet</h3>
+                <p>Brossage manuel, lavage respectueux de la pierre, élimination des mousses et lichens. Redonnez son éclat au monument.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-leaf service-icon"></i>
+                <h3>Fleurissement</h3>
+                <p>Dépôt de plantes fraîches ou de compositions florales selon vos souhaits. Un hommage vivant et coloré.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-sync-alt service-icon"></i>
+                <h3>Entretien Régulier</h3>
+                <p>Formules mensuelles, trimestrielles ou annuelles. Ayez l'esprit tranquille toute l'année. Photos envoyées après chaque passage.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image fade-in">
+             <!-- Placeholder for a dignified cemetery or nature image -->
+            <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sérénité et nature">
+        </div>
+        <div class="about-content fade-in">
+            <h2 class="section-title" style="text-align: left; margin-left: 0;">Qui Sommes-Nous ?</h2>
+            <p>Aeterna est née de la volonté d'apporter un service de confiance aux familles éloignées ou ne pouvant plus se déplacer.</p>
+            <br>
+            <p>Nous comprenons que chaque sépulture raconte une histoire. Notre mission est de préserver cette histoire avec le plus grand soin, en utilisant des produits respectueux de l'environnement et des monuments.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contactez-Nous</h2>
+        <form id="contact-form" class="contact-form fade-in">
+            <div class="form-group">
+                <label for="name">Votre Nom</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Votre Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Votre Message (Lieu de la concession, demande spécifique...)</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">Envoyer la demande</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Aeterna. Tous droits réservés.</p>
+            <p>Respect - Dignité - Souvenir</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
